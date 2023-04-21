@@ -5,6 +5,7 @@ import ShowMainData from '../Components/Shows/ShowMainData';
 import Details from '../Components/Shows/Details';
 import Seasons from '../Components/Shows/Seasons';
 import Cast from '../Components/Shows/Cast';
+import { Link } from 'react-router-dom';
 
 const Show = () => {
   const { showId } = useParams();
@@ -21,6 +22,8 @@ const Show = () => {
   if (showData) {
     return (
       <div>
+        <Link to="/">Back</Link>
+
         <ShowMainData
           image={showData.image}
           name={showData.name}
