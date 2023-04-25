@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
+import { useSearchStr } from '../Lib/useSearchStr';
+
 const SearchForm = ({ onSearch }) => {
-  const [searchStr, setSearchStr] = useState('');
+  const [searchStr, setSearchStr] = useSearchStr('');
   const [searchOption, setSearchOption] = useState('shows');
 
   // 1. mount
