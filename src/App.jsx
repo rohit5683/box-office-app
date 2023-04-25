@@ -1,5 +1,5 @@
 import Home from './Pages/Home';
-import Contact from './Pages/Contact';
+import Starred from './Pages/Starred';
 import MainLayout from './Components/MainLayout';
 import Show from './Pages/Show';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route element={<MainLayout />}>
             <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/starred" element={<Starred />} />
           </Route>
           <Route path="*" element={<div> Page Not Found</div>} />
           <Route path="/show/:showId" element={<Show />} />

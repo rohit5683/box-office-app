@@ -6,8 +6,8 @@ const LINKS = [
     to: '/',
   },
   {
-    text: 'Contact Us',
-    to: '/contact',
+    text: 'Starred',
+    to: '/starred',
   },
 ];
 
