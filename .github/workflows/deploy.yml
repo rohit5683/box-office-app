@@ -9,26 +9,26 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
 
-permissions:
-  contents: write
+    permissions:
+      contents: write
 
-  steps:
-  - name: Checkout repository
-    uses: action/checkout@v3
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
-  - name: Setup Node.js
-    uses: actions/setup-node@v3
-    with:
-      node-version: 18
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
 
-  - name: Install dependencies
-    run: npm Install
+    - name: Install dependencies
+      run: npm install # Corrected case
 
-  - name: Build Project
-    run: run npm build
+    - name: Build Project
+      run: npm run build # Fixed syntax
 
-  - name: Deploy to Github Pages
-    uses: JamesIves/github-pages-deploy-action@4.1.0
-    with:
-      branch: gh-pages
-      folder: build
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@4.1.0
+      with:
+        branch: gh-pages
+        folder: build
